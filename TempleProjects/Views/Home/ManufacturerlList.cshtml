@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TempleProjects.Models.Result>
+
+@{
+    ViewData["Title"] = "ManufacturerlList";
+}
+
+<h1>ManufacturerlList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Make_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Make_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mfr_Name)
+            </th>
+       
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mfr_Name)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>
